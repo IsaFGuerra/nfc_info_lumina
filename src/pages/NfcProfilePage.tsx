@@ -6,12 +6,13 @@ import { ProtectedByLumina } from "../components/nfc/ProtectedByLumina";
 import { TrustedContactsCard } from "../components/nfc/TrustedContactsCard";
 
 const TOP_BG_HEIGHT = "min(244px, 32svh)";
+const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 
 export function NfcProfilePage() {
   return (
     <main className="relative flex h-svh w-full flex-col overflow-hidden bg-[#F7F7F7]">
       <img
-        src="/images/lumina-top-bg.png"
+        src={asset("images/lumina-top-bg.png")}
         alt=""
         aria-hidden
         className="pointer-events-none fixed inset-x-0 top-0 z-0 w-full object-cover object-top"
@@ -26,7 +27,7 @@ export function NfcProfilePage() {
       >
         <ProfileCard
           name="Emma"
-          avatarUrl="/images/emma.jpg"
+          avatarUrl={asset("images/emma.jpg")}
           level="2"
           age="8 anos"
           bloodType="A+"
